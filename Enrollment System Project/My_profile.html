@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Profile</title>
+<style >
+input[type=text], input[type=password], textarea 
+{  
+  width: 75%;  
+  height:55px;
+  border: none;  
+  background: #f1f1f1;  
+  margin-bottom :50px;
+  
+}  
+.hello{
+  
+  background-color: linear-gradient(to right, #1da1f2, #76FF7A );     
+  animation-name: example;
+  animation-duration: 10s;
+  border: 1px solid black;
+  width: 90%;
+  height: 105px; 
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-bottom:20px;
+}
+
+@keyframes example {
+  from {background-color:#98FB98;}
+  to {background-color: #FFA07A;}
+}
+</style>
+</head>
+<body>
+  <?php
+
+if($_SERVER['REQUEST_METHOD']=='GET')
+{
+
+}
+?>
+<form action="<?php echo $_SERVER['PHP_SELF']?>" method = "POST"></form>
+
+    <div style="border: 1px solid black; width: 99.6%; height: 80px;background-color:#6699CC;color:white; text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <b>PROFILE</b>
+    </div>
+    <div style="border: 1px solid black; width: 20%; height: 850px; float: left;background-color: #E0FFFF;">
+   <br>
+   <br>
+   <br>
+
+
+
+   <div>
+    <center><img src="\xampp\htdocs\user.png" height = "100px" width="100" alt="icon">
+    
+    <br>
+    <br>
+    <br>
+    &nbsp;&nbsp;Name:
+    <br>
+    <br>
+    <br>
+    &nbsp;&nbsp;Address:
+    <br>
+    <br>
+    <br>
+    &nbsp;&nbsp;Details:
+    <br><br>
+    &nbsp;&nbsp;Contact no:
+    <br><br>
+    &nbsp;&nbsp;Email:
+    <br> <br> <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+    </div>
+    </div></center>
+    
+    
+    <div style="border: 1px solid black; width: 79.5%; height: 850px; float: left;background-color:#F0FFFF">
+      <br> <br><br> <br> <br> <br>
+      <br> <br> <br> <br>
+      <br> <br> <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+      <br>
+      <br> <br> <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+      <br> <br>
+      <br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type = "submit" value="   ADD PROJECT   ">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type = "submit" value="   UPDATE PROJECT   ">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type = "submit" value="   DELETE PROJECT  ">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type = "submit" value="   VIEW PROJECT  ">
+
+    </div>
+    
+    
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </form>
+  <?php
+}
+elseif($_SERVER['REQUEST_METHOD']=="POST")
+{
+  // PostgreSQL database connection parameters
+$host = "localhost";
+$user = "postgres";
+$pass = "omkar123";
+$dbname = "Student";
+
+echo "omkar";
+
+// Connect to PostgreSQL database
+$conn = pg_connect("host=$host dbname=$dbname user=$user password=$pass");                 
+
+// Check if connection was successful
+if ($conn) {
+  echo "connect to Postgres";
+}
+}
+$sql = "select * from sregister";
+$rs = pg_query_params($conn, $sql);
+
+while ($row = pg_fetch_assoc($rs)) {
+    echo "ID: " . $row['first_name'] . "<br>";
+    echo "Name: " . $row['middle_name'] . "<br>";
+    echo "Email: " . $row['last_name'] . "<br>";
+}
+
+pg_close($conn);
+?>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <style>
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page in HTML</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body background="https://e1.pxfuel.com/desktop-wallpaper/646/773/desktop-wallpaper-login-page-login.jpg">
+    <form action="login.php" method="POST">
+        
+        <div class="mainContainer">
+            <h3>Login As</h3>
+            <p>
+            <input type="radio" name="user"  value = "teacher" required>Teacher
+            <input type="radio" name="user" value = "student" required>Student
+        </p>
+            <p>Log in with your username and password</p>
+            
+            <label for="email">Your Email</label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <br><br>
+
+    
+            <label for="pswrd">Your password</label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+        </div>
+        <div class = "subcontainer">    
+                        
+            <button type="submit">Login</button>
+
+           
+            <p class="register">Not a member as student?  <a href="registerstudent.html.html">Register here!</a></p>
+            
+            <p class="register">Not a member as a teacher?  <a href="registerteacher.html.html" >Register here!</a></p>
+
+            <p class="register">Forget password?  <a href="forgotpwd.html" >Forgot password</a></p>
+       
+        </div>
+
+    </form>
+</body>
+</html>

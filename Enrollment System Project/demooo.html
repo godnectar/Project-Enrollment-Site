@@ -1,0 +1,29 @@
+<html>
+<head>
+    <style type="text/css">
+        table {
+            width:  100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+        }
+        .scrollingTable {
+            width: 30em;
+            overflow-y: auto;
+        }
+    </style>
+<input type="text" value="hema dabade">
+session setting
+session_start();
+$_SESSION['pid'] = $pid;
+
+// redirect to the profile page
+header('Location: updateproject.php');
+
+
+session retriving
+session_start();
+$pid= $_SESSION['pid'];
+</body>
+</html>

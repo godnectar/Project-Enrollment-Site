@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <style>
+      .navbar {
+          overflow: hidden;
+          background-color: #333;
+          position: fixed;
+          top: 0;
+          width: 100%;
+        }
+        </style>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="register.css">
+      <title>Teacher Register</title>
+    </head>
+  
+    <title>Registration</title>
+    </head>
+    <body  background="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoIBwcHDQoHDQcHBxYHBwcIBw8ICQcWIBEWFiARHxMYHSggGBolGxUfITEhMSk3Li4uFx8zODMsNygtLisBCgoKDQ0NDg0NDzcZFRk3Ky0rLSstLTctLSsrKysrKystLTctLS0tKysrKysrKysrKzctKysrKysrKysrKysrK//AABEIAKgBKwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAAQCBgX/xAAVEAEBAAAAAAAAAAAAAAAAAAAAEf/EABgBAQEBAQEAAAAAAAAAAAAAAAEABAYC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/APIIp01coCiKAVCKgYjBQEUKlEYhQooUKgTFBRRDChQojFBUDCogIYUKlEiKAiRVQihQkYhUooigETBUEYRQwKFNtaEjEKlEYoqAYUKgVDBQDDEKqIUYKAjDABCYhUIYiKAihUkUKATEqgYiAEUKkjCKHMMKgoSKFVURSoYCi21pEKMFAUMIqohiMFARhgqEUdRCiiGJKhIoVAlCgFGCoGJChRFCoExQUAwoVCExCiglKgFEVApChIoVMMUKba0KIxCoGGGIUKFCpRIigFEUBEwVBFChRFCoFGCgKOkqhCoRRQYiKAURUEUKEihUCjBUCiKBE6igorBDCm6tKiRgoCJFQRQoSMQqUURQBRgoCMIqEUMMAoUJFVERQoSKFSSIoBRFQRhFAUMMVQUJFAhSgoShiFTCim2tAJiVQMRFARQqSMIocwwqChIoVVRFChIoVAoqgIp5qSMSoShMFQRhFAiKgoSMQqEMKFAJiFQhiIoYIim6tKRigoBhQqEJiFFEMKVAKIqBRFARQqSKgoBKgqEJiFCihQqSUIoEMRFARhFQUJVARIqCKASMUCYISm6tFBiIooKIqCKFCRQqBRgqBUIoEJigoBhQqBRioChIqoiKgoShQqURQoSKgoBhUCBhiFCiRiqBKFDAim2tKSIoBRFQRhFAUMMVFChIqEKUFCUMQqURUFAJQqBKFAJQooKMCBMSoEMRgqCMIooiJFARigqSKFTAjE3VoShMFQRhFAiKgoSMQqEMKFAJiFQMRFAKIqCMKAUMMFAhiQqSMQoqihQqSKgoBKFQhKFAKIqCJVD58MSbmkpIBQxIJFIBKJBFJAFJAFJBFRJAxJBIxIBFIBFIJQhAEhBFJAFJBFRIBIpJ/9k=">
+       
+  <form action="tregister.php" method="post">
+    
+  
+  <div class="container">
+    <centre> <h1> Teacher Registeration</h1></centre>
+
+    <p><marquee  direction="right">Please fill the form to register</marquee></p>
+    
+    <label for="First Name"><b>First Name:</b></label>
+    <input type="text" placeholder="Enter First Name" name="FirstName" id="First Name" maxlength="20"  size="50" required>
+    
+    <label for="MiddleName"><b>Middle Name:</b></label>
+    <input type="text" placeholder="EnterMiddleName" name="MiddleName" id="MiddleName" maxlength="20"  size="50" required>
+
+    <label for="LastName"><b>Last Name:</b></label>
+    <input type="text" placeholder="EnterLastName" name="LastName" id="LastName" maxlength="20"  size="50" required>
+
+    <div class="my1container">
+    <label for="Gender"><b>Gender</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" value = "female" required> Female
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" value = "male" required> male
+    </div>
+    <label for="Age"><b>age</b></label>
+    <input type="text" placeholder="Enter Age" name="age" id="age" maxlength="20"  size="50" required> 
+    
+    <label for="Contact"><b>Contact</b></label><ion-icon name="people-outline"></ion-icon>
+    <input type="text" placeholder="Enter Contact" name="contact" id="contact" maxlength="20"  size="50" required> 
+    
+    <label for="Username"><b>Email</b></label><ion-icon name="people-outline"></ion-icon>
+    <input type="text" placeholder="Enter Username" name="email" id="email" maxlength="20"  size="50" required> 
+
+
+    <label for="subject"><b>Subject</b></label>
+    <input type="text" placeholder="Enter Subject"  name="subject" id="subject" maxlength="20"  size="50" required> 
+
+    <label for="psw"><b>Password</b></label><ion-icon name="lock-closed-outline"></ion-icon>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" maxlength="8"  size="50" required>
+    
+    <div class="mycontainer">
+
+    <input type ="checkbox"name="r1" value="Not project guide">
+    Is Project Guide ?
+    </div>
+    <br>
+    <br>
+      <br>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+
+</form>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
